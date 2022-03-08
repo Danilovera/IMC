@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h1>CALCULADORA DE INDICE DE MASA CORPORAL</h1>
+    <div class="tarjeta-datos-imc">
+        <div class="titulo-tarjeta"><h2 >calculadora IMC</h2></div>
+            <strong>Elige tu genero</strong>
+            <select id="sexoUsuario">
+                <option value="femenino">mujer</option>
+                <option value="masculino">hombre</option>
+            </select><br>
+
+            <label for="edad"><strong>tu edad</strong></label>
+            <input type="number" placeholder="edad" id="edad"><br>
+
+            <label for="peso"><strong>peso</strong></label>
+            <input type="number" placeholder="peso" id="peso"><br>
+
+            <label for="altura"><strong>altura</strong></label>
+            <input type="number" placeholder="altura" id="altura">
+            <button onclick="calcular()">calcular</button>
+    </div>
+    
+    <div id="datosUsuario" class="caja1">
+        <span id="genero">
+        </span>
+        <label for="edad"><strong>tu edad</strong></label>
+        <input type="number" placeholder="edad" id="edadReadOnly" readonly><br>
+
+        <label for="peso"><strong>peso</strong></label>
+        <input type="number" placeholder="peso" id="pesoReadOnly" readonly><br>
+
+        <label for="altura"><strong>altura</strong></label>
+        <input type="number" placeholder="edad" id="alturaReadOnly" readonly><br>
+        <span id="indiceMasa">tu resultado de IMC:</span>
+        <span id="categoriaSalud"></span>
+        <div class="container-img">
+            <img src="./img/peso.png" alt="clasificacion del IMC">
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
